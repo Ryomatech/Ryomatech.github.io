@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: M
+role: Student at Oba lab
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
