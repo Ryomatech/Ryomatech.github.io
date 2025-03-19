@@ -46,12 +46,10 @@ interests:
   - Interpretability
 
 education:
-  - area: Bachelor of Material Science
+  - area: B.S. in Material Science
     institution: Institute of Science Tokyo
     date_start: 2021-04-01
     date_end: 2025-03-31
-    summary: |
-      GPA: 3.5/4.5
 #work:
 #  - position: Director of Cloud Infrastructure
 #    company_name: GenCoin
