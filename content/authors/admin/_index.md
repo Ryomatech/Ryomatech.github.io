@@ -50,6 +50,7 @@ education:
     institution: Institute of Science Tokyo
     date_start: 2021-04-01
     date_end: 2025-03-31
+    summary: |
 #work:
 #  - position: Director of Cloud Infrastructure
 #    company_name: GenCoin
