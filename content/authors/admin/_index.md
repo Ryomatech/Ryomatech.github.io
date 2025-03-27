@@ -46,7 +46,7 @@ interests:
   - Interpretability
 
 education:
-  - area: B.S. in Material Science
+  - area: B.E. in Material Science
     institution: Institute of Science Tokyo
     date_start: 2021-04-01
     date_end: 2025-03-31
