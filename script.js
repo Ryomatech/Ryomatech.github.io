@@ -1,6 +1,7 @@
 const textNodes = document.querySelectorAll("[data-ja][data-en]");
 const toggleButtons = document.querySelectorAll(".lang-toggle button");
 const profileImage = document.querySelector("#profile-image");
+const snowfield = document.querySelector(".snowfield");
 
 if (profileImage) {
   const images = (profileImage.dataset.images || "")
@@ -57,3 +58,41 @@ const observer = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => observer.observe(item));
+
+const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+if (snowfield) {
+  const densityRoll = Math.random();
+  let minFlakes = 12;
+  let maxFlakes = 18;
+  let extraFlakes = 0;
+
+  if (densityRoll >= 0.5 && densityRoll < 0.85) {
+    minFlakes = 18;
+    maxFlakes = 32;
+  } else if (densityRoll >= 0.85) {
+    minFlakes = 32;
+    maxFlakes = 50;
+    // Heavy snow gets a boost so the maximum feels noticeably denser.
+    extraFlakes = randomInt(12, 20);
+  }
+
+  const totalFlakes = randomInt(minFlakes, maxFlakes) + extraFlakes;
+
+  for (let i = 0; i < totalFlakes; i += 1) {
+    const flake = document.createElement("span");
+    const size = randomInt(3, 9);
+    const duration = randomInt(14, 26);
+    const delay = -Math.random() * 20;
+    const drift = randomInt(-22, 22);
+
+    flake.style.left = `${Math.random() * 100}%`;
+    flake.style.width = `${size}px`;
+    flake.style.height = `${size}px`;
+    flake.style.setProperty("--duration", `${duration}s`);
+    flake.style.setProperty("--delay", `${delay}s`);
+    flake.style.setProperty("--drift", `${drift}px`);
+
+    snowfield.appendChild(flake);
+  }
+}
