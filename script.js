@@ -62,21 +62,9 @@ revealItems.forEach((item) => observer.observe(item));
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 if (snowfield) {
-  const densityRoll = Math.random();
-  let minFlakes = 12;
-  let maxFlakes = 18;
-  let extraFlakes = 0;
-
-  if (densityRoll >= 0.5 && densityRoll < 0.85) {
-    minFlakes = 18;
-    maxFlakes = 32;
-  } else if (densityRoll >= 0.85) {
-    minFlakes = 32;
-    maxFlakes = 50;
-    // Heavy snow gets a boost so the maximum feels noticeably denser.
-    extraFlakes = randomInt(12, 20);
-  }
-
+  const minFlakes = 32;
+  const maxFlakes = 50;
+  const extraFlakes = randomInt(12, 20);
   const totalFlakes = randomInt(minFlakes, maxFlakes) + extraFlakes;
 
   for (let i = 0; i < totalFlakes; i += 1) {
