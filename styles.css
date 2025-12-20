@@ -33,6 +33,12 @@ body.lang-ja {
   font-family: "Zen Maru Gothic", "Sora", sans-serif;
 }
 
+.page {
+  width: min(1080px, 100% - 12vw);
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
 main {
   display: block;
 }
@@ -234,9 +240,7 @@ img {
 }
 
 .hero {
-  padding: 24px 6vw 56px;
-  max-width: 1040px;
-  margin: 0;
+  padding: 0 0 48px;
 }
 
 .nav {
@@ -431,9 +435,7 @@ img {
 }
 
 .section {
-  padding: 56px 6vw;
-  max-width: 1040px;
-  margin: 0;
+  padding: 48px 0;
 }
 
 .section-header {
@@ -611,11 +613,9 @@ img {
 }
 
 .footer {
-  padding: 24px 6vw 48px;
+  padding: 24px 0 0;
   color: var(--mist);
   text-align: center;
-  max-width: 1040px;
-  margin: 0;
 }
 
 .reveal {
