@@ -615,7 +615,7 @@ img {
 .footer {
   padding: 24px 0 0;
   color: var(--mist);
-  text-align: center;
+  text-align: left;
 }
 
 .reveal {
