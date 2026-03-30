@@ -430,6 +430,17 @@ img {
   color: var(--mist);
 }
 
+.pub-authors {
+  font-size: 0.98rem;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
 .timeline {
   display: grid;
   gap: 18px;
